@@ -1,0 +1,64 @@
+@import "../styles/mixin.scss";
+
+.header-navmenu-menu-item {
+	position: relative;
+
+	.header-navmenu-submenu-wrapper {
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		top: 100%;
+		z-index: 999;
+		background-color: #fff;
+		min-width: 200px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		padding: 15px;
+		transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+
+		.header-navmenu-submenu {
+			list-style-type: none;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			margin: 0;
+			padding: 0;
+		}
+
+		&.is-submenu-open {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	&:not(.submenu-open-onclick) {
+		&:hover {
+			&>.header-navmenu-submenu-wrapper {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+
+	@include responsive(tablet) {
+		display: block;
+		width: 100%;
+
+		.header-navmenu-link {
+			flex-direction: row-reverse;
+		}
+
+		.header-navmenu-submenu-wrapper {
+			position: relative;
+			box-shadow: none;
+			padding: 10px;
+			background-color: #f7f7f7;
+			opacity: 1;
+			visibility: visible;
+			display: none;
+
+			&.is-submenu-open-sidebar {
+				display: block;
+			}
+		}
+	}
+}

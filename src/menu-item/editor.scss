@@ -1,0 +1,8 @@
+.header-navmenu-menu-item{
+	&.is-selected, &.has-child-selected{
+		& > .wp-block-header-template-submenu{
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}

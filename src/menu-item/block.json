@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "header-template/menu-item",
+	"version": "1.0.0",
+	"title": "Header Menu Item",
+	"category": "header-template",
+	"parent": ["header-template/navmenu"],
+	"description": "Menu item for header template",
+	"example": {
+		"preview": true
+	},
+	"attributes": {
+		"menuLabel": {
+			"type": "string",
+			"default": "Menu Item"
+		},
+		"menuLink": {
+			"type": "object",
+			"default": {
+				"url": "#"
+			} 
+		},
+		"addSubmenu": {
+			"type": "boolean",
+			"default": false
+		},
+		"submenuIdicator": {
+			"type": "string",
+			"default": "arrow-down-alt2"
+		},
+		"openOnClick": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "header-template",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

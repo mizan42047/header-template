@@ -1,0 +1,71 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "header-template/header-navbar",
+	"version": "1.0.0",
+	"title": "Header Navbar",
+	"category": "header-template",
+	"description": "Navbar for header template",
+	"parent": ["header-template/header-container"],
+	"example": {
+		"preview": true
+	},
+	"attributes": {
+		"blockClass": {
+			"type": "string"
+		},
+		"blockCSS": {
+			"type": "string"
+		},
+		"headerNavbarBackground": {
+			"type": "string"
+		},
+		"headerNavbarMaxWidth": {
+			"type": "string"
+		},
+		"headerNavbarPadding": {
+			"type": "object"
+		},
+		"headerNavbarMargin": {
+			"type": "object"
+		},
+		"headerNavbarContentAlign": {
+			"type": "string"
+		},
+		"headerNavbarContentSpaceBetween": {
+			"type": "string"
+		},
+		"headerNavbarLogoBoxWrapperWidth": {
+			"type": "string"
+		},
+		"headerNavbarJustifyContent": {
+			"type": "string",
+			"default": "space-between"	
+		},
+		"headerNavbarWrapperWidth": {
+			"type": "string"
+		},
+		"headerNavbarMenuBackground": {
+			"type": "string"
+		},
+		"headerNavbarMenuItemTextColor": {
+			"type": "string"
+		},
+		"headerNavbarMenuItemGapBetween": {
+			"type": "string"
+		},
+		"headerNavbarMenuItemFontSize": {
+			"type": "string"
+		},
+		"mobileLogoWidth": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "header-template",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

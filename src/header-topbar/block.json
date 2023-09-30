@@ -1,0 +1,55 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "header-template/header-topbar",
+	"version": "1.0.0",
+	"title": "Header Topbar",
+	"category": "header-template",
+	"description": "Topbar for header template",
+	"parent": ["header-template/header-container"],
+	"example": {
+		"preview": true
+	},
+	"attributes": {
+		"blockClass": {
+			"type": "string"
+		},
+		"blockCSS": {
+			"type": "string"
+		},
+		"headerTopbarBackground": {
+			"type": "string",
+			"default": "#eee"
+		},
+		"headerTopbarTextColor": {
+			"type": "string",
+			"default": "#1e1e1e"
+		},
+		"headerTopbarMaxWidth": {
+			"type": "string"
+		},
+		"headerTopbarPadding": {
+			"type": "object"
+		},
+		"headerTopbarMargin": {
+			"type": "object"
+		},
+		"headerTopbarLinkFontSize": {
+			"type": "string"
+		},
+		"headerTopbarContentAlign": {
+			"type": "string",
+			"default": "flex-end"
+		},
+		"headerTopbarLinkGapBetween": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "header-template",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
